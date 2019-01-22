@@ -1,0 +1,33 @@
+<div>
+    <table>
+        <tr>
+            <td>
+                <label>Enter first number</label>
+            </td>
+            <td>
+                <input type="text" placeholder="Number" #firstNumTxt [(ngModel)]="firstNum">
+            </td>
+        </tr>
+        <tr>
+            <td>Enter second number</td>
+            <td>
+                <input type="text" placeholder="Number" #secondNumTxt [(ngModel)]="secondNum">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="button" (click)="onClickAddNumberByFunctionParameters(firstNumTxt.value,secondNumTxt.value)">
+                    Add two no by passing numbers</button>
+            </td>
+            <td>
+                <button type="button" (click)="onClickAddNumbersByNgModels()">Add two no by ngModels</button>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div>
+    <p>Result by using ngModel : {{resultByNgModesl}}</p>
+    <p>Result by using function params : {{resultByFunctionParams}}</p>
+
+</div>
